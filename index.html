@@ -1,12 +1,103 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!-- ==============FONT ICON LINK=============== -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!--=============== CSS LINK==================== -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- ===============TITLE======================= -->
     <title>PRO Auto</title>
+
 </head>
+
 <body>
-    
+
+    <!-- ===============HEADER====================== -->
+    <header class="header" id="header">
+        <nav class="nav" id="nav">
+            <a href="#" class="nav__logo">
+                <div>
+                    <img src="./images/nav-logo.png" alt="">
+                </div>
+            </a>
+            <div class="nav__menu" id="nav--menu">
+                <ul class="nav__list">
+                    <li class="nav__item dropdown">
+                        <a href="#" class="nav__link dropdown-toggle">КОМПАНИЯ</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">О КОМПАНИИ</a></li>
+                            <li><a href="#">ЛИЦЕНЗИИ</a></li>
+                            <li><a href="#">ПАРТНЕРЫ</a></li>
+                            <li><a href="#">ОТЗЫВЫ КЛИЕНТОВ</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav__item dropdown">
+                        <a href="#" class="nav__link dropdown-toggle">КАТАЛОГ</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">О КОМПАНИИ</a></li>
+                            <li><a href="#">ЛИЦЕНЗИИ</a></li>
+                            <li><a href="#">ПАРТНЕРЫ</a></li>
+                            <li><a href="#">ОТЗЫВЫ КЛИЕНТОВ</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav__item dropdown">
+                        <a href="#" class="nav__link dropdown-toggle">УСЛУГИ</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">О КОМПАНИИ</a></li>
+                            <li><a href="#">ЛИЦЕНЗИИ</a></li>
+                            <li><a href="#">ПАРТНЕРЫ</a></li>
+                            <li><a href="#">ОТЗЫВЫ КЛИЕНТОВ</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav__item dropdown">
+                        <a href="#" class="nav__link dropdown-toggle">ИНФОРМАЦИЯ</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">О КОМПАНИИ</a></li>
+                            <li><a href="#">ЛИЦЕНЗИИ</a></li>
+                            <li><a href="#">ПАРТНЕРЫ</a></li>
+                            <li><a href="#">ОТЗЫВЫ КЛИЕНТОВ</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav__item dropdown">
+                        <a href="#" class="nav__link dropdown-toggle">КОНТАКТЫ</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">О КОМПАНИИ</a></li>
+                            <li><a href="#">ЛИЦЕНЗИИ</a></li>
+                            <li><a href="#">ПАРТНЕРЫ</a></li>
+                            <li><a href="#">ОТЗЫВЫ КЛИЕНТОВ</a></li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <div class="nav__call">
+                    <button class="nav__call-btn">ЗАКАЗАТЬ ЗВОНОК</button>
+                    <div>
+                        <div class="nav__call-search">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </div>
+                        <div class="nav__call-basket">
+                            <i class="fa-solid fa-cart-shopping"></i>
+
+                            <div class="nav__basket-number">0</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </nav>
+    </header>
+
+    <!-- ====================script============================== -->
+    <script src="script.js"></script>
 </body>
+
 </html>
