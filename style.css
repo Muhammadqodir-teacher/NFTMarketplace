@@ -1,44 +1,52 @@
 /* ====================FONT================== */
+
 @font-face {
     font-family: 'Geometria';
-    src: url('fonts/Geometria.woff2') format('woff2'),
-         url('fonts/Geometria.woff') format('woff');
+    src: url('fonts/Geometria.woff2') format('woff2'), url('fonts/Geometria.woff') format('woff');
     font-weight: normal;
     font-style: normal;
-  }
-  
-  body {
-    font-family: 'Geometria', sans-serif;
-  }
+}
 
-  /* =================BASE==================== */
-*{
+body {
+    font-family: 'Geometria', sans-serif;
+}
+
+
+/* =================BASE==================== */
+
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-li{
+li {
     list-style: none;
 }
 
-a{
+a {
     text-decoration: none;
 }
 
-img{
+img {
     display: block;
     max-width: 100%;
 }
 
+
 /* ==================HEADER================= */
-.header{
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
     width: 100%;
     height: auto;
     background: #0E0E0E;
     padding-top: 20px;
 }
-.nav{
+
+.nav {
     width: 80%;
     display: flex;
     align-items: center;
@@ -47,30 +55,31 @@ img{
     position: relative;
 }
 
-.nav__menu{
+.nav__menu {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 20px;
 }
-.nav__list{
+
+.nav__list {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 22px;
 }
 
-.nav__item{
-    padding: 19px 5px;
+.nav__item {
+    padding: 19px 4px;
     border-bottom: 5px solid transparent;
     transition: all 0.5s;
 }
 
-.nav__item:hover{
+.nav__item:hover {
     border-bottom: 5px solid #D42E12;
 }
 
-.nav__item  a{
+.nav__item a {
     font-family: Geometria;
     font-weight: 500;
     font-size: 16px;
@@ -81,18 +90,18 @@ img{
     color: #FFFFFF;
 }
 
-.nav__call{
+.nav__call {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 20px;
 }
 
-.nav__call-btn{
+.nav__call-btn {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 10px 12px ;
+    padding: 10px 12px;
     border: 4px solid #D42E12;
     background: none;
     font-family: Geometria;
@@ -103,29 +112,33 @@ img{
     text-align: center;
     vertical-align: middle;
     color: #FFFFFF;
+    cursor: pointer;
 }
 
-.nav__call div{
+.nav__call div {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 14px;
 }
 
-.nav__call-search{
+.nav__call-search {
     color: #FFFFFF;
     padding: 10px 2px;
     font-size: 22px;
+    cursor: pointer;
 }
 
-.nav__call-basket{
+.nav__call-basket {
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 22px;
     color: #FFFFFF;
+    cursor: pointer;
 }
-.nav__basket-number{
+
+.nav__basket-number {
     width: 28px;
     height: 28px;
     background: #C53720;
@@ -135,43 +148,127 @@ img{
     justify-content: center;
     color: #FFFFFF;
 }
+
+
 /* ======================dropdown======================== */
+
 .dropdown {
     position: relative;
 }
-  
-  .dropdown-menu {
+
+.dropdown-menu {
     display: none;
     position: absolute;
-    top: 60px;
+    top: 62px;
     left: 0;
-    background: #1c1c1c;
+    background: #000000;
     padding: 10px 0;
-    min-width: 200px;
+    min-width: 300px;
     z-index: 1000;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
 }
-  
-  .dropdown-menu li a {
+
+.dropdown:hover .dropdown-menu {
     display: block;
-    padding: 10px 5px;
-    color: #fff;
-    font-size: 14px;
-    text-align: left;
+}
+
+.dropdown:active .dropdown-menu {
+    display: block;
+}
+
+.dropdown-menu li a {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 12px;
+    color: #FFFFFF;
+    text-align: start;
+    font-family: Geometria;
+    font-size: 12px;
+    transition: background 0.3s ease;
     font-family: Geometria;
     font-weight: 500;
-    font-size: 12px;
+    font-size: 16px;
     line-height: 100%;
     letter-spacing: 0%;
     vertical-align: middle;
-
 }
-  
-  .dropdown-menu li a:hover {
+
+.dropdown-menu li a:hover {
     background-color: #D42E12;
 }
-  
-  .dropdown.open .dropdown-menu {
+
+.dropdown-menu li a i{
+    display: none;
+}
+.dropdown-menu li a:hover i{
     display: block;
 }
+
+/* =================search============================ */
+.search-box {
+    display: none;
+    width: 100%;
+    position: absolute;
+    top: 70px;
+    background: none;
+    padding: 10px 5px;
+    z-index: 999;
+    cursor: pointer;
+  }
   
+  .search-box div i{
+    color: #A5A5A5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 10px;
+    font-size: 25px;
+    cursor: pointer;
+  }
+
+  .search-box input {
+    padding: 10px 10px;
+    border: none;
+    outline: none;
+    font-family: Geometria;
+    background:#FFFFFF;
+    color: #000000;
+    width: 80%;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .search-box-btn{
+    padding: 10px 12px ;
+    border: 4px solid #C53720;
+    background: none;
+    font-family: Geometria;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    text-align: center;
+    vertical-align: middle;
+    color: #FFFFFF;
+    cursor: pointer;
+  }
+  .search-close {
+    color: #A5A5A5;
+    font-size: 22px;
+    margin-left: 10px;
+    cursor: pointer;
+  }
+
+  /* ===================HERO======================== */
+.hero{
+    width: 100%;    
+    height: 100vh;
+    background-image: url(./images/hero-img.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.hero__container{
+   
+}
