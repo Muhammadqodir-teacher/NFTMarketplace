@@ -1,16 +1,27 @@
-// ================search==================================
+// ================navigatsion for mobile device======
 
-const searchIcon = document.querySelector('.search-icon');
-const searchBox = document.querySelector('.search-box');
-const closeSearch = document.querySelector('.search-close');
+const navMenu = document.getElementById("nav--menu");
+const navToggle = document.getElementById("nav--toggle");
+const navClose = document.getElementById("nav--close");
 
-searchIcon.addEventListener('click', () => {
-  searchBox.style.display = 'flex';
-  searchBox.style.alignItems = 'center';
-  searchBox.style.justifyContent = 'space-between';
+
+navToggle.addEventListener('click', () =>{
+    navMenu.style.left = 0;
 });
 
-closeSearch.addEventListener('click', () => {
-  searchBox.style.display = 'none';
+
+
+
+
+// ==================search======================
+const searchIcon = document.querySelector(".nav__call-search");
+const searchContainer = document.querySelector(".search__container");
+const searchClose = document.querySelector(".search-close");
+
+searchIcon.addEventListener('click', () =>{
+    searchContainer.style.display = "flex"
 });
 
+searchClose.addEventListener('click', () =>{
+    searchContainer.style.display = "none"
+})
