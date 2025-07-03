@@ -3,3 +3,83 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+a{
+    text-decoration: none;
+}
+
+li{
+    list-style: none;
+}
+
+/* ===== HEADER ======= */
+.header{
+    width: 100%;
+    height: auto;
+    background: #131E3A;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.nav{
+    margin: 0 auto;
+    width: 80%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 0;
+}
+.nav__list{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+}
+
+.nav__link{
+    font-family: Inter;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 160%;
+    letter-spacing: 0px;
+    vertical-align: middle;
+    color: #FFFFFDB8;
+    position: relative;
+}
+
+.nav__link::after{
+    content: " ";
+    width: 0;
+    height: 2px;
+    background: #D6EF0E;
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    transition: width .3s;
+}
+.nav__link:hover::after{
+    width: 100%;
+}
+.nav__link:hover{
+    color: #FFFFFF;
+}
+.nav__contact{
+    padding: 12px 20px;
+    background:#D6EF0E;
+    border: none;
+    border-radius: 8px;
+    font-family: Inter;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 120%;
+    letter-spacing: 0px;
+    vertical-align: middle;
+    color: #FFFFFF;
+    transition: all 0.5s;
+}
+
+.nav__contact:hover{
+    background:  rgb(192, 209, 64);
+}
