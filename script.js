@@ -1,18 +1,24 @@
-let sections = document.querySelector(".section");
-let navLInk = document.querySelector(".nav__link");
+// =========== navlink active =============
 
-window.onscroll = () =>{
-    sections.forEach(sec => {
-        let top  = window.screenY;
-        let offset = sec.offsetTop;
-        let height = sec.offsetHeight;
-        let id = sec.getAttribute('id');
+const sections = document.querySelectorAll('section[id]');
 
-        if (top >= offset && top < offset + height) {
-            navLInk.forEach(links => {
-                links.classList.remove('active');
-                document.querySelector('header nav a[href*=' + id  +']'),classList.add('active');
-            })
-        };
+const scrollActive = () => {
+    const scrollDown = window.scrollY;
+
+    sections.forEach(current => {
+        const sectionHeight = current.offsetHeight,
+            sectionTop = current.offsetTop - 58,
+            sectionId = current.getAttribute('id'),
+            sectionsClass = document.querySelector('.nav__menu a[href*=' + sectionId + ']');
+
+        if (sectionsClass) { // Agar element topilgan bo‘lsa
+            if (scrollDown > sectionTop && scrollDown <= sectionTop + sectionHeight) {
+                sectionsClass.classList.add('active-link');
+            } else {
+                sectionsClass.classList.remove('active-link');
+            }
+        }
     });
-}
+};
+
+window.addEventListener('scroll', scrollActive);
