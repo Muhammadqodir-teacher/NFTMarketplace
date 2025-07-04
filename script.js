@@ -11,7 +11,7 @@ const scrollActive = () => {
             sectionId = current.getAttribute('id'),
             sectionsClass = document.querySelector('.nav__menu a[href*=' + sectionId + ']');
 
-        if (sectionsClass) { // Agar element topilgan bo‘lsa
+        if (sectionsClass) {
             if (scrollDown > sectionTop && scrollDown <= sectionTop + sectionHeight) {
                 sectionsClass.classList.add('active-link');
             } else {
