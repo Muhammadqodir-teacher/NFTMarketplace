@@ -45,7 +45,7 @@ li{
     width: 100%;
     height: auto;
     background: #131E3A;
-    position: fixed;
+    position: sticky;
     top: 0;
     left: 0;
     z-index: 999;
@@ -119,6 +119,46 @@ li{
     transition: all 0.5s;
 }
 
+.nav__close,
+.nav__toggle{
+    display: flex;
+    font-size: 50px;
+    cursor: pointer;
+}
+
+@media only screen and (max-width:1150px){
+    .nav__menu{
+        position: fixed;
+        background: #131E3A;
+        width: 25%;
+        height: 100%;
+        top: 0;
+        left: -100%;
+        padding-block: 72px 56px;
+        transition: left .4s;
+    }
+    .nav__list{
+        padding: 0 20px;
+        flex-direction: column;
+        column-gap: 64px;
+        align-items: flex-start;
+    }
+}
+@media only screen and (min-width:1150px){
+    .nav__toggle,
+      .nav__close{
+          display: none;
+      }
+}
+.nav__close{
+    position: absolute;
+    top: 18px;
+    right: 15px;
+}
+
+.show--menu{
+    left: 0;
+}
 /* ========== marketplace ============ */
 .Marketplace {
     width: 100%;

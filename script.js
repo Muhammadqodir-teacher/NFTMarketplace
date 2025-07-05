@@ -1,3 +1,28 @@
+// =========== show menu ==================
+const navMenu = document.getElementById("nav--menu");
+const navToggle = document.getElementById("nav--toggle");
+const navClose = document.getElementById("nav--close");
+
+
+navToggle.style.color = "#ff0000"
+
+if (navMenu) {
+    navToggle.addEventListener('click', () => {
+        navMenu.classList.add("show--menu");
+        navClose.style.color = "#7fff00"
+        navToggle.style.color = "#7fff00"
+        navToggle.style.display = "#ff0000"
+    })
+}
+
+if (navMenu) {
+    navClose.addEventListener('click', () => {
+        navMenu.classList.remove("show--menu");
+        navClose.style.color = "#ff0000"
+        navToggle.style.color = "#ff0000"
+    })
+}
+
 // =========== navlink active =============
 
 const sections = document.querySelectorAll('section[id]');
