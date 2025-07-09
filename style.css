@@ -1005,3 +1005,133 @@ li{
 .artists__Subscribe__btn:hover::before{
     left: 0;
 }
+
+
+/* ============ footer ================ */
+.footer{
+    width: 100%;
+    background: #000;
+    padding: 20px 0;
+}
+
+.footer__container{
+    width: 80%;
+    margin: 0 auto;
+}
+
+.footer__top{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #FFFFFD;
+    padding: 25px 0;
+}
+
+.footer__social__text{
+    max-width: 260px;
+    font-family: Inter;
+    font-weight: 400;
+    font-style: Regular;
+    font-size: 16px;
+    leading-trim: NONE;
+    line-height: 160%;
+    letter-spacing: 0px;
+    vertical-align: middle;
+    color: #FFFFFD;
+}
+
+.footer__socila__cards{
+    display: flex;
+    gap: 15px;
+    padding: 16px 0;
+}
+
+.footer__social__box{
+    padding: 3px;
+    background: #FFFFFF;
+    border-radius: 3px;
+    transition: color .5s;
+    color: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer__social__box:hover{
+    background: #D6EF0E;
+}
+
+.footer__list{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-gap: 30px;
+}
+
+.footer__subtitle{
+    font-family: Inter;
+    font-weight: 700;
+    font-style: Bold;
+    font-size: 20px;
+    leading-trim: NONE;
+    line-height: 120%;
+    letter-spacing: 0px;
+    vertical-align: middle;
+    color: #FFFFFF;
+    padding-bottom:15px; 
+}
+
+.footer__link ul{
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+    grid-gap: 10px;
+}
+
+.footer__link ul a{
+    font-family: Inter;
+    font-weight: 400;
+    font-style: Regular;
+    font-size: 16px;
+    leading-trim: NONE;
+    line-height: 160%;
+    letter-spacing: 0px;
+    vertical-align: middle;
+    color: rgba(255, 255, 253, 0.719);
+}
+
+.footer__bottom{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 25px 0;
+}
+
+.footer__bottom__box{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+.footer__bottom__year{
+    font-family: Inter;
+    font-weight: 400;
+    font-style: Regular;
+    font-size: 16px;
+    leading-trim: NONE;
+    line-height: 160%;
+    letter-spacing: 0px;
+    text-align: center;
+    color: #fffffda9;
+}
+
+.footer__bottom__box p{
+    font-family: Inter;
+    font-weight: 400;
+    font-style: Regular;
+    font-size: 16px;
+    leading-trim: NONE;
+    line-height: 160%;
+    letter-spacing: 0px;
+    text-align: center;
+    color: #fffffdab;
+}
